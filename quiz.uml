@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="141.1111111111111" y="0.0">model.Test</node>
+    <node x="0.0" y="169.0">beans.QuizBean</node>
+    <node x="128.11805555555554" y="360.0">beans.QuizRunBean</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="beans.QuizRunBean" target="beans.QuizBean">
+      <point x="-77.625" y="-104.0" />
+      <point x="153.99305555555554" y="340.0" />
+      <point x="128.5" y="340.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="beans.QuizBean" target="model.Test">
+      <point x="-85.66666666666669" y="-70.5" />
+      <point x="42.833333333333314" y="139.0" />
+      <point x="155.1944444444444" y="139.0" />
+      <point x="-70.41666666666669" y="59.5" />
+    </edge>
+    <edge source="beans.QuizRunBean" target="model.Test">
+      <point x="77.625" y="-104.0" />
+      <point x="309.24305555555554" y="340.0" />
+      <point x="289.5" y="340.0" />
+      <point x="289.5" y="149.0" />
+      <point x="296.02777777777777" y="149.0" />
+      <point x="70.41666666666669" y="59.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.1979591836734695" x="300.97190773910086" y="424.98884758364323" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
