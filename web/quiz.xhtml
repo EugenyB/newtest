@@ -12,14 +12,18 @@
         <h:form id="form">
             <p:panel header="Вопрос № #{quizRunBean.questionNum}" id="questionpanel">
                 <h:panelGrid columns="1">
-                    <h:outputText value="#{quizRunBean.selectedTest.question}" />
-                    <p:inputText value="#{quizRunBean.selectedTest.answer}" required="#{not empty param['form:answer']}"/>
+                    <h:outputText value="#{quizRunBean.selectedTest.question}"/>
+                    <p:inputText value="#{quizRunBean.selectedTest.answer}"
+                                 required="#{not empty param['form:answer']}"/>
+                </h:panelGrid>
+                <h:panelGrid columns="3">
+                    <p:commandButton id="backward" value="Вернуться" action="#{quizRunBean.prev}" update="questionpanel"/>
                     <p:commandButton id="answer" value="Ответить" action="#{quizRunBean.fixAnswer}" update="questionpanel"/>
                     <p:commandButton id="forward" value="Пропустить" action="#{quizRunBean.next}" update="questionpanel"/>
-                    <p:commandButton id="backward" value="Вернуться" action="#{quizRunBean.prev}" update="questionpanel"/>
-                    <p:commandButton id="finish" value="Завершить" action="#{quizRunBean.finish}" ajax="false" />
                 </h:panelGrid>
-                <p:progressBar value="#{quizRunBean.answered*100/quizRunBean.numberOfTests}" />
+                <p:commandButton id="finish" value="Завершить" action="#{quizRunBean.finish}" ajax="false"/>
+
+                <p:progressBar value="#{quizRunBean.answered*100/quizRunBean.numberOfTests}"/>
             </p:panel>
         </h:form>
     </h:body>

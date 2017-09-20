@@ -16,7 +16,7 @@ import static java.util.stream.Collectors.toList;
 @SessionScoped
 public class QuizBean implements Serializable {
 
-    public static final String FILE_NAME = "R:/projects/Victor/newtest/Tests.txt";
+    public static final String FILE_NAME = "D:/Programs/IdeaProjects/newtest/tests.txt";
     private List<Test> tests;
 
     @PostConstruct

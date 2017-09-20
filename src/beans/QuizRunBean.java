@@ -1,7 +1,6 @@
 package beans;
 
 
-
 import model.Test;
 
 import javax.annotation.PostConstruct;
@@ -15,7 +14,7 @@ import java.util.List;
 
 @SessionScoped
 @Named
-public class QuizRunBean implements Serializable{
+public class QuizRunBean implements Serializable {
 
     public static final int NUMBER_OF_TESTS = 5;
     @Inject
@@ -24,7 +23,7 @@ public class QuizRunBean implements Serializable{
     private List<Test> selectedTests;
     private int questionNum;
     private Test selectedTest;
-//    private List<Integer> lastAnswers;
+    //    private List<Integer> lastAnswers;
     private List<Integer> answers;
     private int answered;
     String lastAnswer;
@@ -91,7 +90,12 @@ public class QuizRunBean implements Serializable{
     }
 
     public void prev() {
-        //FIXME написать возврат к предыдущему вопросу - см. next()
+        // FIXME Доработать prev(задания в программе сами, произвольно меняются)
+        selectedTest.setAnswer(lastAnswer);
+        selectedTest = selectedTests.get(questionNum % NUMBER_OF_TESTS);
+        lastAnswer = selectedTest.getAnswer();
+        questionNum--;
+        if (questionNum <= 0) questionNum = 5;
     }
 
     public String finish() {
