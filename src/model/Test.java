@@ -22,7 +22,7 @@ public class Test {
     }
 
     public void setAnswer(String answer) {
-        this.answer = answer;
+        this.answer = answer.trim();
     }
 
     public String getCoranswer() {

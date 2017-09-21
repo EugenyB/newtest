@@ -27,6 +27,7 @@ public class QuizRunBean implements Serializable {
     private List<Integer> answers;
     private int answered;
     String lastAnswer;
+    private String correctAnswers;
 
     @PostConstruct
     public void init() {
@@ -63,6 +64,10 @@ public class QuizRunBean implements Serializable {
         this.questionNum = questionNum;
     }
 
+    public String getCorrectAnswers() {
+        return correctAnswers;
+    }
+
     public void fixAnswer() {
         if (lastAnswer.isEmpty() && !selectedTest.getAnswer().isEmpty()) {
             answered++;
@@ -95,11 +100,11 @@ public class QuizRunBean implements Serializable {
         selectedTest = selectedTests.get(questionNum % NUMBER_OF_TESTS);
         lastAnswer = selectedTest.getAnswer();
         questionNum--;
-        if (questionNum <= 0) questionNum = 5;
+        if (questionNum < 1) questionNum = NUMBER_OF_TESTS;
     }
 
     public String finish() {
-        //TODO Завершение и подсчет
+
         return "finish";
     }
 }

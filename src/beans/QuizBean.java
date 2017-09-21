@@ -45,6 +45,7 @@ public class QuizBean implements Serializable {
     }
 
     public List<Test> getTests() {
+
         return tests;
     }
 
